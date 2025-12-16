@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --background: #14181c;
+  --background-secondary: #1c2228;
+  --background-tertiary: #242c34;
+  --foreground: #99aabb;
+  --foreground-bright: #ffffff;
+  --accent: #00e054;
+  --accent-hover: #00c44a;
+  --accent-orange: #ff8000;
+  --border: #2c3440;
+  --star: #00e054;
+  --star-empty: #456;
+}
+
+[data-theme="light"] {
+  --background: #f4f5f6;
+  --background-secondary: #ffffff;
+  --background-tertiary: #e8eaed;
+  --foreground: #456;
+  --foreground-bright: #14181c;
+  --accent: #007a2f;
+  --accent-hover: #005f24;
+  --accent-orange: #cc5c00;
+  --border: #d0d4d9;
+  --star: #007a2f;
+  --star-empty: #ccd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-foreground: var(--foreground);
+  --color-foreground-bright: var(--foreground-bright);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-orange: var(--accent-orange);
+  --color-border: var(--border);
+  --color-star: var(--star);
+  --color-star-empty: var(--star-empty);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+input, textarea, select {
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  color: var(--foreground-bright);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  cursor: pointer;
+}
